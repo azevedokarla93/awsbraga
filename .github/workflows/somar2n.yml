@@ -10,7 +10,7 @@ on:
       ambiente:
         description: 'Escolha o ambiente de execução'
         required: true
-        default: 'teste'  # valor padrão, pode ser "teste", "produção", etc.
+        default: 'teste'  # agora é string
       valor1:
         description: 'Primeiro valor para soma'
         required: true
@@ -23,15 +23,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: ${{ github.event.inputs.ambiente }}  # Usa o environment escolhido
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Run a one-line script
-        run: echo Iniciando execução do soma.py
-
-      - name: Run a multi-line script
+      - name: Executando soma.py
         run: |
-          echo Executando soma.py com inputs do workflow
+          echo Ambiente selecionado: ${{ github.event.inputs.ambiente }}
           python soma.py ${{ github.event.inputs.valor1 }} ${{ github.event.inputs.valor2 }}
