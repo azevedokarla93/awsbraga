@@ -30,4 +30,4 @@ jobs:
       - name: Executando soma.py
         run: |
           echo Ambiente selecionado: ${{ github.event.inputs.ambiente }}
-          python soma.py ${{ github.event.inputs.valor1 }} ${{ github.event.inputs.valor2 }}
+          python soma.py ${{ github.event.inputs.v1 }} ${{ github.event.inputs.v2 }}
