@@ -11,14 +11,14 @@ on:
         description: 'Escolha o ambiente de execução'
         required: true
         default: 'teste'  # agora é string
-      valor1:
+      v1:
         description: 'Primeiro valor para soma'
         required: true
-        default: 10
-      valor2:
+        
+      v2:
         description: 'Segundo valor para soma'
         required: true
-        default: 20
+        
 
 jobs:
   build:
