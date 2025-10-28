@@ -16,7 +16,7 @@ on:
                default: Karla
                required: True
 
-           Apelido:
+           apelido:
                default: Melo
                required: True
 
